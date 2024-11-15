@@ -30,6 +30,8 @@ ELEMENT.addEventListener(EVENEMENT, FONCTION);
 /*
 EXERCICE 1 :
 Affiche bonjour dans une boîte de dialogue au clic sur le bouton
+
+
 */
 /*
 TRADUCTION :
@@ -49,3 +51,5 @@ MÉTHODE :
 
 
 // Écriture ES6
+
+document.getElementById('hello').addEventListener('click', () => alert("Bonjour !"));

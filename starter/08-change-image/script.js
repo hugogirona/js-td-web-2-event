@@ -6,6 +6,7 @@ EXERCICE 8 :
 Au clic sur l'image, change sa source par celle qui se trouve dans son attribut "data-hover".
 BONUS : switche entre les deux images : quand on re-clique, tu reviens à l'image originale et ainsi de suite
 */
+
 /* 
 AIDE POUR LE BONUS :
 Pour réaliser cet effet, il suffit d'échanger le contenu des deux propriétés src et dataset.hover :
@@ -28,6 +29,25 @@ La méthode classique est de créer une variable temporaire, comme ceci :
 
 
 // version de base
-
+// const imgSrc = document.querySelector('img').src;
+// const imgData = document.querySelector('img').dataset.hover;
+// document.querySelector('img').addEventListener('click', function(evt) {
+//     if (evt.currentTarget.src === imgSrc) {
+//         evt.currentTarget.src = imgData;
+//     }else {
+//         evt.currentTarget.src = imgSrc;
+//     }
+// });
 
 // BONUS : switch entre les deux images
+
+document.querySelector('img').addEventListener('click', (e) => {
+    [
+        e.currentTarget.src,
+        e.currentTarget.dataset.hover
+    ] = [
+        e.currentTarget.dataset.hover,
+        e.currentTarget.src
+    ]
+})
+

@@ -10,7 +10,11 @@ Ta mission est toujours la même : au clic sur un des boutons, colorie la page d
     - BONUS : Une fois que c'est fait, apporte encore une seconde amélioration à ton code : au lieu de faire quatre appels de fonction différés (un pour chaque bouton), parcours la liste des boutons avec une boucle (utilise ici la boucle for… of) et affecte-leur l'écouteur d'événement dans la boucle.
 */
 
+const buttonElts = document.querySelectorAll('button');
 
+for (const buttonElt of buttonElts) {
+    buttonElt.addEventListener('click', () => {document.body.style.backgroundColor = buttonElt.id})
+}
 
 // BONUS : encore mieux avec la boucle
 

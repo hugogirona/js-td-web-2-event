@@ -14,3 +14,16 @@ EXERCICE 6 : Change couleur (3)
 
 // ÉTAPE 2 : version avec deux écouteurs
 
+const colorChoice = document.getElementById('colorChoice');
+
+// Fonction pour changer la couleur de fond
+function backgroundColor(evt) {
+    evt.preventDefault(); // Empêche la soumission du formulaire
+    document.body.style.backgroundColor = colorChoice.value;
+}
+
+// Écouteur pour le clic sur le bouton
+document.getElementById('colorBtn').addEventListener('click', backgroundColor);
+
+// Écouteur pour la touche ENTER sur l'input de couleur
+

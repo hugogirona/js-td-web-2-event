@@ -4,7 +4,12 @@ Au clic sur le bouton,
 	sous le bouton (dans la section de classe "display") ;
 - fais disparaître le bouton
 */
-
+function afficheImage(evt) {
+    document.querySelector(".display").insertAdjacentHTML('afterbegin', `
+    <img src="bonjour.jpg" alt="une image qui dit bonjour"/>`)
+}
+document.getElementById('hello').addEventListener("click", (evt) =>  document.querySelector(".display").insertAdjacentHTML('afterbegin', `
+    <img src="bonjour.jpg" alt="une image qui dit bonjour"/>`));
 
 
 /*
@@ -29,5 +34,5 @@ C'est une notion IMPORTANTE, essentielle, très très souvent utilisée dans la 
 // autre écriture
 
 
+// Écriture
 
-// Écriture ES6

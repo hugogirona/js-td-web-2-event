@@ -19,6 +19,6 @@
 
 // Plus court : écriture ES6 avec expression conditionnelle
 
-
+document.getElementById('hello').addEventListener('click', () => alert(`Bonjour, ${document.getElementById('prenom').value}`))
 
 
